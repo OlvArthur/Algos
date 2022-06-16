@@ -1,14 +1,6 @@
-class TreeNode {
-  value: string
-  left: TreeNode | null
-  right: TreeNode | null
+import BinaryTree,{ TreeNode } from "./BinaryTree"
 
-  constructor(val: string) {
-    this.value = val
-    this.left = null
-    this.right = null
-  }
-}
+const { implementation } = BinaryTree
 
 /* Iterative version */
 // const depthFirstValues = (root: TreeNode | null) => {
@@ -42,26 +34,5 @@ const depthFirstValues = (root: TreeNode | null): string[] => {
 }
 
 
-const a = new TreeNode('a')
-const b = new TreeNode('b')
-const c = new TreeNode('c')
-const d = new TreeNode('d')
-const e = new TreeNode('e')
-const f = new TreeNode('f')
-const g = new TreeNode('g')
-const h = new TreeNode('h')
-const i = new TreeNode('i')
-const j = new TreeNode('j')
 
-a.left = b
-a.right = c
-b.left = d
-b.right = e
-c.left = f
-c.right = g
-d.left = h
-d.right = i
-e.left = j
-
-
-console.log(depthFirstValues(a))
+console.log(depthFirstValues(implementation))
