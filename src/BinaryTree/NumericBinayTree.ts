@@ -33,13 +33,13 @@ d.right = i
 e.left = j
 
 
-            //             a
+            //             3
             //           /   \
-            //         b       c
+            //         5       9
             //       /   \    /  \
-            //     d      e  f    g
+            //     3      6  5    7
             //   /   \   /  
-            // h      i j   
+            // 1      4 2   
 
 
 export default {
