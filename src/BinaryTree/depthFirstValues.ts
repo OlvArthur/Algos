@@ -23,14 +23,26 @@ const { implementation } = BinaryTree
 // }
 
 
-/* Recursive version */
-const depthFirstValues = (root: TreeNode | null): string[] => {
-  if (root === null) return []
+/* Recursive LIFO version */
+// const depthFirstValues = (root: TreeNode | null): string[] => {
+//   if (root === null) return []
 
-  const leftValues = depthFirstValues(root.left)
-  const rightValues = depthFirstValues(root.right)
+//   const leftValues = depthFirstValues(root.left)
+//   const rightValues = depthFirstValues(root.right)
 
-  return [ root.value, ...leftValues, ...rightValues  ]
+//   return [ root.value, ...leftValues, ...rightValues  ]
+// }
+
+/* Recursive FIFO version */
+function depthFirstValues(root: TreeNode | null, results: string[] = []) {
+  if(root === null) return results
+
+  results.push(root.value)
+
+  depthFirstValues(root.left, results)
+  depthFirstValues(root.right, results)
+
+  return results
 }
 
 

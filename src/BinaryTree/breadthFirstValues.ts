@@ -6,7 +6,7 @@ const breadthFirstValues = (root: TreeNode): string[] => {
   if(!root.value) return []
   const queue: TreeNode[] = [ root ]
   const results: string[] = []
-  // allowed methods for queue: push and shift
+  // allowed methods for queue: push and shift || unshift and pop
 
   while(queue.length) {
     const current = queue.shift()

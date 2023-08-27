@@ -45,3 +45,38 @@ e.left = j
 export default {
   implementation: a
 }
+
+
+export function createBalancedTree() {
+  const three = new TreeNode('3') 
+  const nine = new TreeNode('9')
+  const twenty = new TreeNode('20') 
+  const fithteen = new TreeNode('15') 
+  const seven = new TreeNode('7')
+  
+  three.left = nine
+  three.right = twenty
+  twenty.left = fithteen
+  twenty.right = seven
+
+  return three
+}
+
+export function createUnbalancedTree() {
+  const one = new TreeNode('1')
+  const two = new TreeNode('2')
+  const secondTwo = new TreeNode('2')
+  const three = new TreeNode('3')
+  const secondThree = new TreeNode('3')
+  const four = new TreeNode('4')
+  const secondFour = new TreeNode('4')
+
+  one.left = two
+  one.right = secondTwo
+  two.left = three
+  two.right = secondThree
+  three.left = four
+  three.right = secondFour
+
+  return one
+}

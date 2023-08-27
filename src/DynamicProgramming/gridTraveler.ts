@@ -1,8 +1,12 @@
 // What are the number of possible paths from the top left to the bottom right corner of a grid?
 // you can only move down or right
 const gridTraveller = (n: number,m: number): number => {
-  if(n === 1 && m === 1) return 1
-  if(n === 0 || m === 0) return 0
+  const traverllerHasArrived = n === 1 && m === 1 
+  if(traverllerHasArrived) return 1
+  
+
+  const travellerIsOutOfGrid = n === 0 || m === 0
+  if(travellerIsOutOfGrid) return 0
 
   return gridTraveller(n - 1,m) + gridTraveller(n, m - 1)
 }
